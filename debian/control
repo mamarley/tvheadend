@@ -1,14 +1,14 @@
 Source: tvheadend
 Section: video
 Priority: extra
-Maintainer: Adam Sutton <aps@tvheadend.org>
-Build-Depends: debhelper (>= 7.0.50), pkg-config, gettext, libavahi-client-dev, libssl-dev, zlib1g-dev, wget, bzip2, git-core, liburiparser-dev, python | python3, python-requests | python3, ca-certificates, cmake, libpcre2-dev | libpcre3-dev, libdvbcsa-dev
+Maintainer: Michael Marley <michael@michaelmarley.com>
+Build-Depends: debhelper (>= 10~), pkg-config, gettext, libavahi-client-dev, libssl-dev, zlib1g-dev, wget, bzip2, git-core, liburiparser-dev, python | python3, python-requests | python3, ca-certificates, libx264-dev, libx265-dev, libvpx-dev, libfdk-aac-dev, libopus-dev, libhdhomerun-dev, libsystemd-dev, libdbus-1-dev, libpcre2-dev | libpcre3-dev, libdvbcsa-dev, libavfilter-dev, libswresample-dev, libavresample-dev, libswscale-dev, libavformat-dev, libavcodec-dev, libavutil-dev, libva-dev, markdown, pngquant
 Standards-Version: 3.7.3
 
 Package: tvheadend
 Architecture: any
 Depends: ${shlibs:Depends}, libavahi-client3, zlib1g, liburiparser1, bzip2
-Recommends: xmltv-util, python, python-requests
+Recommends: xmltv-util, python3-all, python3-requests
 Enhances: showtime
 Replaces: hts-tvheadend
 Homepage: https://tvheadend.org

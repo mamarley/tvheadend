@@ -31,7 +31,7 @@ nbproject
 .*.sw[op]
 *.bak
 *.orig
-*.patch
+#*.patch
 
 debian/changelog
 debian/files

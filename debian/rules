@@ -5,14 +5,8 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 %:
 	dh $@ --with-systemd
 
-override_dh_builddeb:
-	dh_builddeb -- -Zgzip
-
 override_dh_auto_configure:
-	dh_auto_configure -- ${AUTOBUILD_CONFIGURE_EXTRA} ${JOBSARGS}
-
-override_dh_auto_build:
-	make ${JARGS}
+	dh_auto_configure -- --prefix=/usr --enable-hdhomerun_client --disable-hdhomerun_static --disable-dvbscan --enable-libav --disable-ffmpeg_static --enable-libx264 --disable-libx264_static --enable-libx265 --disable-libx265_static --enable-libvpx --disable-libvpx_static --enable-libtheora --disable-libtheora_static --enable-libvorbis --disable-libvorbis_static --enable-libfdkaac --disable-libfdkaac_static --enable-libopus --disable-libopus_static --enable-vaapi --enable-nvenc --enable-omx --enable-dvbcsa --enable-dvben50221 --enable-libsystemd_daemon --enable-pcre2 --enable-pngquant --enable-ddci --python=/usr/bin/python3
 
 override_dh_strip:
 	dh_strip --dbg-package=tvheadend-dbg
